@@ -42,10 +42,7 @@ public class BreakingBadCall {
         List<BreakingBadPojo> breakingBadPojos = objectMapper.readValue(response.getEntity().getContent(),
                 objectMapper.getTypeFactory().constructCollectionType(List.class, BreakingBadPojo.class));
 
-        if ((breakingBadPojos.size() != 0)) {
-            System.out.println("Id: " + breakingBadPojos.get(0).getChar_id() + "-> " + breakingBadPojos.get(0).getName());
-        } else {
-            System.out.println("Id: " + randomId + " -> does not have a payload.");
-        }
+        System.out.println("Id: " + breakingBadPojos.get(0).getChar_id() + "-> " + breakingBadPojos.get(0).getName()+" and the nickname is: "
+                +breakingBadPojos.get(0).getNickname());
     }
 }

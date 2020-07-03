@@ -31,7 +31,12 @@ public class PayLoadUtil {
 
     public static int generateRandomId() {
         Random random = new Random();
-        return random.nextInt(117 - 1) + 1;
+        int id=0;
+       id= random.nextInt(117 - 1) + 1;
+      while (id>=58 && id<=111){
+          id= random.nextInt(117 - 1) + 1;
+       }
+       return id;
     }
 
 
